@@ -1,0 +1,134 @@
+﻿[
+  {
+    "ruleEvaluator": "(lastDayMinpHvalue != 0) && (lastDayMinpHvalue < 5)",
+    "warningContent": "Fish and vegetable won't appreciate - pH value is out of range : min last 24h {0}",
+    "warningContentFR": "Les poissons et les végétaux ne vont pas apprécier - La valeur du pH est hors-limite : min dern. 24h {0}",
+    "bindingPropertyValue": "lastDayMinpHvalue"
+  },
+  {
+    "ruleEvaluator": "(lastDayMaxpHvalue != 0) && (lastDayMaxpHvalue > 9)",
+    "warningContent": "Fish and vegetable won't appreciate - pH value is out of range : max last 24h {0}",
+    "warningContentFR": "Les poissons et les végétaux ne vont pas apprécier - La valeur du pH est hors-limite : min dern. 24h {0}",
+    "bindingPropertyValue": "lastDayMaxpHvalue"
+  },
+  {
+    "ruleEvaluator": "(lastDayPHvariation != 0) && (lastDayPHvariation > 2)",
+    "warningContent": "High pH variation : delta last 24h {0}",
+    "warningContentFR": "Grandes variation du pH : variation dern. 24h {0}",
+    "bindingPropertyValue": "lastDayPHvariation"
+  },
+  {
+    "ruleEvaluator": "(threeLastDayPHvariation != 0) && (threeLastDayPHvariation > 0.5)",
+    "warningContent": "High pH fluctuation : mean delta last 3 days {0} - Watch for algeas",
+    "warningContentFR": "Grandes variation du pH : variation dern. 24h {0} - Vérifier présence d'algues",
+    "bindingPropertyValue": "threeLastDayPHvariation"
+  },
+  {
+    "ruleEvaluator": "(lastWeekPHmean != 0) && (lastWeekPHmean >= 8)",
+    "warningContent": "High pH level : mean last week {0} - Performances can be improved",
+    "warningContentFR": "Niveau de pH élevé - moyenne semaine dern. {0} - Les performances peuvent être améliorées",
+    "bindingPropertyValue": "lastWeekPHmean"
+  },
+  {
+    "ruleEvaluator": "(lastDayMinAirTempvalue != 0) && (lastDayMinAirTempvalue <= 2)",
+    "warningContent": "It's cold inside ({0}°C) - Add greenhouse insulation",
+    "warningContentFR": "Il fait froid à l'intérieur ({0}°C) - Ajouter une isolation pour la serre",
+    "bindingPropertyValue": "lastDayMinAirTempvalue"
+  },
+  {
+    "ruleEvaluator": "(lastDayMaxAirTempvalue != 0) && (lastDayMaxAirTempvalue >= 45)",
+    "warningContent": "It's too hot inside ({0}°C) - Open the doors and add a shadows cloths",
+    "warningContentFR": "Il fait très chaud à l'intérieur ({0}°C) - Ouvrir les portes et ajouter une toile d'ombrage",
+    "bindingPropertyValue": "lastDayMaxAirTempvalue"
+  },
+  {
+    "ruleEvaluator": "((airTempvalue <= 10 ) && (humidityvalue >= 83)) || ((airTempvalue <= 15 ) && (humidityvalue >= 89)) || ((airTempvalue <= 30 ) && (humidityvalue >= 95))",
+    "warningContent": "Air Humidity value is out of range : {0}",
+    "warningContentFR": "L'humidité de l'air est hors-limite : {0}",
+    "bindingPropertyValue": "humidityvalue"
+  },
+  {
+    "ruleEvaluator": "(lastDayMinWaterTempvalue != 0) && (lastDayMinWaterTempvalue <= 5)",
+    "warningContent": "Water is cold there ({0}°C) - Add water heater on tanks",
+    "warningContentFR": "L'eau est trop froide ({0}°C) -  Ajouter une résistance chauffante dans les bassins",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Carp') && (lastDayMinWaterTempvalue <= 2)",
+    "warningContent": "Water Temperature value is out of range for Carps: min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Carpes : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Carp') && (lastDayMaxWaterTempvalue >= 30)",
+    "warningContent": "Water Temperature value is out of range for Carps: max {0}°C",
+    "warningContentFR": "La température de l'eau est trop élevée pour les Carpes : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Tilapia') && (lastDayMinWaterTempvalue <= 14)",
+    "warningContent": "Water Temperature value is out of range for Tilapias:  min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Tilapias : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Tilapia') && (lastDayMaxWaterTempvalue >= 35)",
+    "warningContent": "Water Temperature value is out of range for Tilapias:  max {0}°C",
+    "warningContentFR": "La température de l'eau est trop élevée pour les Tilapias : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Trout') && (lastDayMinWaterTempvalue <= 5)",
+    "warningContent": "Water Temperature value is out of range for Trouts : min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Truites : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Trout') && (lastDayMaxWaterTempvalue >= 25)",
+    "warningContent": "Water Temperature value is out of range for Trouts : max {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Truites : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Crayfish') && (lastDayMinWaterTempvalue <= 5)",
+    "warningContent": "Water Temperature value is out of range for Crayfish: min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Ecrevisses : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Crayfish') && (lastDayMaxWaterTempvalue >= 22)",
+    "warningContent": "Water Temperature value is out of range for Crayfish: max {0}°C",
+    "warningContentFR": "La température de l'eau est trop élevée pour les Ecrevisses : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Oth. Cold Fish') && (lastDayMinWaterTempvalue <= 5)",
+    "warningContent": "Water Temperature value is out of range for Cold Water Fish: min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Poissons d'Eaux Froides : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Oth. Cold Fish') && (lastDayMaxWaterTempvalue >= 22)",
+    "warningContent": "Water Temperature value is out of range for Cold Water Fish: max {0}°C",
+    "warningContentFR": "La température de l'eau est trop élevée pour les Poissons d'Eaux Froides : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Oth. Warm Fish') && (lastDayMinWaterTempvalue <= 14)",
+    "warningContent": "Water Temperature value is out of range for Warm Water Fish: min {0}°C",
+    "warningContentFR": "La température de l'eau est trop basse pour les Poissons d'Eaux Chaudes : min {0}°C",
+    "bindingPropertyValue": "lastDayMinWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": "(hydroponicTypeName = 'Aquaponics - Oth. Warm Fish') && (lastDayMaxWaterTempvalue >= 32)",
+    "warningContent": "Water Temperature value is out of range for Warm Water Fish: max {0}°C",
+    "warningContentFR": "La température de l'eau est trop élevée pour les Poissons d'Eaux Chaudes : max {0}°C",
+    "bindingPropertyValue": "lastDayMaxWaterTempvalue"
+  },
+  {
+    "ruleEvaluator": " (hydroponicTypeName != 'Bioponics') && (lastWeekPHmean != 0) && (lastWeekPHmean >= 8) && (waterTempvalue >= 22)",
+    "warningContent": "Presence of Probable Ammonia in Water - Potential Hazard for Fish: pH {0}",
+    "warningContentFR": "Présence d'ammoniac probable dans l'eau - Danger potentiel pour les poissons : pH {0}",
+    "bindingPropertyValue": "lastWeekPHmean"
+  }
+]
